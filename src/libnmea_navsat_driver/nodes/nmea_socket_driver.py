@@ -84,7 +84,7 @@ def main():
                 for data in data_list:
 
                     try:
-                        driver.add_sentence(data, frame_id)
+                        driver.add_sentence(data.strip(), frame_id)
                     except ValueError as e:
                         rospy.logwarn(
                             "Value error, likely due to missing fields in the NMEA message. "
